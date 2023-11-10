@@ -1,0 +1,145 @@
+/* Estilo del cuerpo */
+body {
+    font-family: "Gill Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(25deg, #ffffff 40%, transparent 41%, transparent 59%, #ffffff 60%)  ,linear-gradient(90deg, transparent 45%, #4f46e4 45%, #4f46e4 55%, transparent 55%, transparent 20%, #4f46e4 20%, #4f46e4 30%,transparent 30%) ,linear-gradient(90deg, #4f46e4 9%, transparent 10%);
+        background-size: 1em 1em;
+        background-color: #ffffff;
+        opacity: 1
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: #4F46E4;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* Estilo del encabezado h1 */
+header h1 {
+    margin: 0;
+}
+
+/* Estilo de las secciones */
+section {
+    padding: 20px;
+}
+
+/* Estilo de los títulos de sección */
+section h2 {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Estilo del contenedor de la sección Sobre Mí */
+.sobre-mi-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 100px;
+}
+
+/* Estilo del texto en la sección Sobre Mí */
+.sobre-mi-texto {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    background-color: #4F46E4;
+    color: #fff;
+    border-radius: 10px;
+}
+
+/* Estilo de la imagen en la sección Sobre Mí */
+.sobre-mi-imagen {
+    flex: 1;
+    text-align: right;
+}
+
+.sobre-mi-imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* Estilo de los proyectos */
+.proyecto {
+    background-color: #fff;
+    border: 6px solid #4F46E4;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.proyecto img {
+    max-width: 100%;
+    height: auto;
+    margin: 5px 0;
+}
+
+.proyecto p {
+    padding-top: 20px;
+}
+
+.proyecto a h4 {
+    color: #000000;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de cambio de escala al pasar el cursor por encima de los títulos de los proyectos */
+.proyecto a h4:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo del footer */
+footer {
+    background-color: #4F46E4;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.boton-descargar {
+    background-color: #fff;
+    font-family: "Gill Sans", sans-serif;
+    color: #4F46E4;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.boton-descargar:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo de los enlaces de redes sociales */
+.redes-sociales a {
+    display: inline-block;
+    padding-top: 20px;
+    margin: 0 10px;
+    transition: transform 0.2s ease;
+}
+
+.redes-sociales a img {
+    width: 40px; /* Ajusta el tamaño de los iconos según sea necesario */
+    height: 40px;
+}
+
+/* Efecto de cambio de escala al pasar el cursor por encima de los iconos */
+.redes-sociales a:hover {
+    transform: scale(1.2);
+}
