@@ -9,70 +9,42 @@ body {
         opacity: 1
 }
 
-/* Estilo del encabezado */
-header {
+/* Estilo del contenedor del header */
+.header-container {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
     background-color: #4F46E4;
     color: #fff;
-    text-align: center;
-    padding: 20px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
 }
 
-/* Estilo del encabezado h1 */
-header h1 {
-    margin: 0;
+/* Estilo de la imagen de perfil en el header */
+.imagen-header img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
 }
 
-/* Estilo de las secciones */
-section {
-    padding: 20px;
+/* Estilo del texto en el header */
+.texto-header {
+    flex-grow: 1;
+    padding-left: 50px;
 }
 
-/* Estilo de los títulos de sección */
-section h2 {
-    font-size: 24px;
-    color: #fff;
-    text-align: center;
-}
-
-/* Estilo del contenedor de la sección Sobre Mí 
+/* Estilo del contenedor de la sección Sobre Mí */
 .sobre-mi-container {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 100px;
-}*/
-
-.layout {
-    width: 100%;
-    display: flex;
-    gap: 16px;
+    margin: 40px;
 }
 
-.grow1 { 
-    flex-grow: 1; 
-}
-
-.sobre-mi-titulo {
-    font-size: 18px;
-    background-color: #4F46E4;
-    color: #fff;
-    border-radius: 10px;
-}
-
-.sobre-mi-parrafo {
-    font-size: 18px;
-    background-color: #4F46E4;
-    color: #fff;
-    border-radius: 10px;
-}
-
-/* Estilo del texto en la sección Sobre Mí
+/* Estilo del texto en la sección Sobre Mí */
 .sobre-mi-texto {
     flex: 1;
     text-align: center;
@@ -83,26 +55,22 @@ section h2 {
     border-radius: 10px;
 }
 
-/* Estilo de la imagen en la sección Sobre Mí 
-.sobre-mi-imagen {
-    flex: 1;
-    text-align: right;
+/* Estilo de los proyectos */
+.contenedor-proyectos {
+    padding-bottom: 100px;
 }
 
-.sobre-mi-imagen img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}*/
+.contenedor-proyectos h2 {
+    background-color: #fff;
+    text-align: center;
+}
 
-
-/* Estilo de los proyectos */
 .proyecto {
     background-color: #fff;
     border: 6px solid #4F46E4;
     border-radius: 10px;
-    margin: 10px;
-    padding: 20px;
+    margin: 50px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -133,6 +101,8 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .boton-descargar {
