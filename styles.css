@@ -36,7 +36,7 @@ section h2 {
     text-align: center;
 }
 
-/* Estilo del contenedor de la sección Sobre Mí */
+/* Estilo del contenedor de la sección Sobre Mí 
 .sobre-mi-container {
     display: flex;
     justify-content: center;
@@ -46,18 +46,26 @@ section h2 {
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 100px;
-}
+}*/
 
 .layout {
+    width: 100%;
     display: flex;
     gap: 16px;
-    justify-content: space-evenly;
-    align-items: center;
-  }
+}
 
-.sobre-mi-texto {
-    text-align: center;
-    padding: 60px;
+.grow1 { 
+    flex-grow: 1; 
+}
+
+.sobre-mi-titulo {
+    font-size: 18px;
+    background-color: #4F46E4;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.sobre-mi-parrafo {
     font-size: 18px;
     background-color: #4F46E4;
     color: #fff;
