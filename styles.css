@@ -48,7 +48,23 @@ section h2 {
     padding-top: 100px;
 }
 
-/* Estilo del texto en la sección Sobre Mí */
+.layout {
+    display: flex;
+    gap: 16px;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+.sobre-mi-texto {
+    text-align: center;
+    padding: 60px;
+    font-size: 18px;
+    background-color: #4F46E4;
+    color: #fff;
+    border-radius: 10px;
+}
+
+/* Estilo del texto en la sección Sobre Mí
 .sobre-mi-texto {
     flex: 1;
     text-align: center;
@@ -59,7 +75,7 @@ section h2 {
     border-radius: 10px;
 }
 
-/* Estilo de la imagen en la sección Sobre Mí */
+/* Estilo de la imagen en la sección Sobre Mí 
 .sobre-mi-imagen {
     flex: 1;
     text-align: right;
@@ -69,7 +85,7 @@ section h2 {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-}
+}*/
 
 
 /* Estilo de los proyectos */
