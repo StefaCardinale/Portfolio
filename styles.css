@@ -26,12 +26,34 @@ body {
     max-width: 100px;
     height: auto;
     border-radius: 50%;
+    animation: cambiar-opacidad 2.5s ease-out;
+}
+
+@keyframes cambiar-opacidad {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* Estilo del texto en el header */
 .texto-header {
     flex-grow: 1;
     padding-left: 50px;
+    animation: aparecer-derecha 1.5s ease-out;
+}
+  
+@keyframes aparecer-derecha {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
 }
 
 /* Estilo del contenedor de la sección Sobre Mí */
@@ -48,18 +70,27 @@ body {
 .sobre-mi-texto {
     flex: 1;
     text-align: center;
+    line-height: 28px;
     padding: 20px;
     font-size: 18px;
     background-color: #4F46E4;
     color: #fff;
     border-radius: 10px;
+    animation: aparecer-izquierda 1.5s ease-out;
+}
+  
+@keyframes aparecer-izquierda {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
 }
 
 /* Estilo de los proyectos */
-.contenedor-proyectos {
-    padding-bottom: 100px;
-}
-
 .contenedor-proyectos h2 {
     background-color: #fff;
     text-align: center;
@@ -130,11 +161,78 @@ footer {
 }
 
 .redes-sociales a img {
-    width: 40px; /* Ajusta el tamaño de los iconos según sea necesario */
+    width: 40px;
     height: 40px;
 }
 
 /* Efecto de cambio de escala al pasar el cursor por encima de los iconos */
 .redes-sociales a:hover {
     transform: scale(1.2);
+}
+
+/* Estilo de los certificados */
+.certificados-container {
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.certificados-container h1 {
+    display: inline-block;
+    padding: 12px;
+    font-size: 28px;
+    color: #000000;
+    background-color: #ffffff;
+    border: 4px solid #4F46E4;
+    border-radius: 8px;
+}
+
+.recorrido {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    position: relative;
+}
+
+.certificado {
+    flex: 1;
+    border: 3px solid #4F46E4;
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 20px;
+    background-color: #f9f9f9;
+    opacity: 0;
+    animation: aparecer 1s forwards;
+    transition: transform 0.3s ease;
+}
+
+.certificado:hover {
+    transform: scale(1.1);
+}
+
+.certificado a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.certificado:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.certificado:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.certificado:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.certificado:nth-child(4) {
+    animation-delay: 2s;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+    }
 }
