@@ -149,11 +149,21 @@ body {
     border-radius: 8px;
 }
 
+/* Estilo del contenedor de los certificados */
 .recorrido {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
-    position: relative;
+    flex-wrap: wrap; /* Permitir el ajuste automático en dispositivos móviles */
+    margin: 20px 0; /* Ajustar el margen vertical según sea necesario */
+}
+
+/* Media query para dispositivos con un ancho máximo de 768px (tabletas y dispositivos móviles) */
+@media screen and (max-width: 768px) {
+    /* Cambiar el diseño de los certificados en dispositivos móviles */
+    .certificado {
+        flex: 0 0 calc(50% - 20px); /* Establecer un ancho del 50% menos el margen lateral */
+        margin: 0 10px 20px; /* Establecer un margen lateral de 10px y un margen inferior de 20px */
+    }
 }
 
 /* Estilo de los certificados */
