@@ -156,9 +156,10 @@ body {
     position: relative;
 }
 
+/* Estilo de los certificados */
 .certificado {
     flex: 1;
-    border: 3px solid #4F46E4;
+    border: 2px solid #4F46E4;
     border-radius: 10px;
     padding: 20px;
     margin-right: 20px;
@@ -166,11 +167,13 @@ body {
     opacity: 0;
     animation: aparecer 1s forwards;
     transition: transform 0.3s ease;
+    max-width: 300px; /* Ancho máximo para dispositivos móviles */
+    margin: 20px auto; /* Margen automático para centrar en dispositivos móviles */
 }
 
 /* Efecto de cambio de escala al pasar el cursor por encima de los certificados */
 .certificado:hover {
-    transform: scale(1.1);
+    transform: scale(0.9);
 }
 
 .certificado a {
