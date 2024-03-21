@@ -4,16 +4,15 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(25deg, #ffffff 40%, transparent 41%, transparent 59%, #ffffff 60%)  ,linear-gradient(90deg, transparent 45%, #4f46e4 45%, #4f46e4 55%, transparent 55%, transparent 20%, #4f46e4 20%, #4f46e4 30%,transparent 30%) ,linear-gradient(90deg, #4f46e4 9%, transparent 10%);
-        background-size: 1em 1em;
-        background-color: #ffffff;
-        opacity: 1
+    background-size: 1em 1em;
+    background-color: #ffffff;
+    opacity: 1;
 }
 
 /* Estilo del contenedor del header */
-.header-container {
+.contenedor-header {
     display: flex;
-    width: 100%;
-    gap: 16px;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
@@ -23,7 +22,7 @@ body {
 
 /* Estilo de la imagen de perfil en el header */
 .imagen-header img {
-    max-width: 100px;
+    max-width: 150px;
     height: auto;
     border-radius: 50%;
     animation: cambiar-opacidad 2.5s ease-out;
@@ -40,11 +39,11 @@ body {
 
 /* Estilo del texto en el header */
 .texto-header {
-    flex-grow: 1;
-    padding-left: 50px;
+    text-align: center;
+    padding-top: 20px;
     animation: aparecer-derecha 1.5s ease-out;
 }
-  
+
 @keyframes aparecer-derecha {
     0% {
       opacity: 0;
@@ -57,7 +56,7 @@ body {
 }
 
 /* Estilo del contenedor de la sección Sobre Mí */
-.sobre-mi-container {
+.contenedor-sobre-mi {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,7 +66,7 @@ body {
 }
 
 /* Estilo del texto en la sección Sobre Mí */
-.sobre-mi-texto {
+.texto-sobre-mi {
     flex: 1;
     text-align: center;
     line-height: 28px;
@@ -78,7 +77,7 @@ body {
     border-radius: 10px;
     animation: aparecer-izquierda 1.5s ease-out;
 }
-  
+
 @keyframes aparecer-izquierda {
     0% {
       opacity: 0;
@@ -91,9 +90,18 @@ body {
 }
 
 /* Estilo de los proyectos */
-.contenedor-proyectos h2 {
-    background-color: #fff;
+.contenedor-proyectos {
     text-align: center;
+}
+
+.contenedor-proyectos h1 {
+    display: inline-block;
+    padding: 12px;
+    font-size: 28px;
+    color: #000000;
+    background-color: #ffffff;
+    border: 4px solid #4F46E4;
+    border-radius: 8px;
 }
 
 .proyecto {
@@ -102,7 +110,6 @@ body {
     border-radius: 10px;
     margin: 50px;
     padding: 10px;
-    text-align: center;
 }
 
 .proyecto img {
@@ -124,6 +131,74 @@ body {
 /* Efecto de cambio de escala al pasar el cursor por encima de los títulos de los proyectos */
 .proyecto a h4:hover {
     transform: scale(1.1);
+}
+
+/* Estilo de los certificados */
+.contenedor-certificados {
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.contenedor-certificados h1 {
+    display: inline-block;
+    padding: 12px;
+    font-size: 28px;
+    color: #000000;
+    background-color: #ffffff;
+    border: 4px solid #4F46E4;
+    border-radius: 8px;
+}
+
+.recorrido {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    position: relative;
+}
+
+.certificado {
+    flex: 1;
+    border: 3px solid #4F46E4;
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 20px;
+    background-color: #f9f9f9;
+    opacity: 0;
+    animation: aparecer 1s forwards;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de cambio de escala al pasar el cursor por encima de los certificados */
+.certificado:hover {
+    transform: scale(1.1);
+}
+
+.certificado a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.certificado:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.certificado:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.certificado:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.certificado:nth-child(4) {
+    animation-delay: 2s;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+    }
 }
 
 /* Estilo del footer */
@@ -168,71 +243,4 @@ footer {
 /* Efecto de cambio de escala al pasar el cursor por encima de los iconos */
 .redes-sociales a:hover {
     transform: scale(1.2);
-}
-
-/* Estilo de los certificados */
-.certificados-container {
-    text-align: center;
-    padding-bottom: 35px;
-}
-
-.certificados-container h1 {
-    display: inline-block;
-    padding: 12px;
-    font-size: 28px;
-    color: #000000;
-    background-color: #ffffff;
-    border: 4px solid #4F46E4;
-    border-radius: 8px;
-}
-
-.recorrido {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-    position: relative;
-}
-
-.certificado {
-    flex: 1;
-    border: 3px solid #4F46E4;
-    border-radius: 10px;
-    padding: 20px;
-    margin-right: 20px;
-    background-color: #f9f9f9;
-    opacity: 0;
-    animation: aparecer 1s forwards;
-    transition: transform 0.3s ease;
-}
-
-.certificado:hover {
-    transform: scale(1.1);
-}
-
-.certificado a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-
-.certificado:nth-child(1) {
-    animation-delay: 0.5s;
-}
-
-.certificado:nth-child(2) {
-    animation-delay: 1s;
-}
-
-.certificado:nth-child(3) {
-    animation-delay: 1.5s;
-}
-
-.certificado:nth-child(4) {
-    animation-delay: 2s;
-}
-
-@keyframes aparecer {
-    to {
-        opacity: 1;
-    }
 }
